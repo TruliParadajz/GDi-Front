@@ -1,0 +1,91 @@
+* {
+  font-family: "Courier New";
+  color: dimgrey;
+}
+
+h1 {
+  color: black;
+  font-size: 70px;
+  text-align: center;
+  margin-top: 10px;
+  background-color: lightgrey;
+}
+.body1 {
+  float: left; 
+  margin: auto;
+  width: 500px;
+  border-style: groove;
+}
+
+.open {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 0.5px solid;
+}
+
+.open:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+.close {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 0.5px solid;
+}
+  .close:hover {
+    background-color: red;
+    color: white;
+  }
+
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  background-color: #333;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+#gumb {
+}
+.taskList {
+  width: 350px;
+  text-align: left;
+}
+.tasksEntry {
+  text-align: left;
+  width: 350px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+#statistics{
+  text-align: right;
+}
+.titles {
+  text-decoration: underline;
+}

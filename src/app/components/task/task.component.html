@@ -1,0 +1,33 @@
+<body class="body1">
+  <h1>TO-DO</h1>
+
+  <div class="tasksEntry">
+    <p>Enter your tasks below.</p>
+    <form id="enter" (submit)="addToDo(todo.value)">
+      <div>
+        <input name="vrbabox" type="text" #todo [(ngModel)]="textboxVariable">
+        <button class="open" id="gumb" type="reset" (click)="addToDo(todo.value)">Add</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="taskList">
+    <h2 class="titles">The list of To-Dos</h2>
+    <ul (change)="ifchecked()">
+      <li *ngFor="let todo of todos; let i = index">
+        <input type="checkbox" (change)="toggle(todo)" [(ngModel)]="todo.check" [value]="todo.check">
+        {{todo.text}}
+        <button class="close" (click)="deleteToDo(todo.id)">x</button>
+      </li>
+    </ul>
+  </div>
+
+  <div id="statistics">
+    <h2 class="titles">Statistics</h2>
+    <div>
+      <p>Checked:{{checkedNum}}</p>
+      <p>Unchecked:{{uncheckedNum}}</p>
+    </div>
+  </div>
+</body>
+
